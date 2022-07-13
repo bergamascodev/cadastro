@@ -1,0 +1,15 @@
+version: "3.8"
+services: 
+   mysql_cadastro:
+     image: mysql:8.0.28
+     container_name: mysql_api
+     restart: always
+     environment:
+       MYSQL_ROOT_PASSWORD: glb980323.
+       MYSQL_PASSWORD: root
+       MYSQL_USERNAME: root
+       MYSQL_DATABASE: cadastro
+     ports:
+       - "3306:3306"
+     cap_add:
+       - SYS_NICE
